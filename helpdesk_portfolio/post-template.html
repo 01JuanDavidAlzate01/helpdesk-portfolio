@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <section class="section">
+        <div id="post-content" class="post-container"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        async function loadPost() {
+            const params = new URLSearchParams(window.location.search);
+            const postName = params.get("post");
+
+            if (!postName) {
+                document.getElementById("post-content").innerHTML = "<p>Post not found.</p>";
+                return;
+            }
+
+            try {
+                const response = await fetch(`/posts/${postName}.md`);
+                if (!response.ok) throw new Error("Missing file");
+
+                const markdown = await response.text();
+                document.getElementById("post-content").innerHTML = marked.parse(markdown);
+            } catch (err) {
+                document.getElementById("post-content").innerHTML = "<p>Post not found.</p>";
+            }
+        }
+
+        loadPost();
+    </script>
+</body>
+
+</html>

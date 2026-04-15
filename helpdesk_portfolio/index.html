@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan David Alzate | IT Help Desk Technician</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Juan<span>Alzate</span></div>
+
+        <nav class="nav-links" id="navLinks">
+            <button class="close-btn" onclick="toggleMenu()">✕</button>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#labs">Labs</a>
+            <a href="#experience">Experience</a>
+            <a href="#certs">Certifications</a>
+            <a href="blog.html">Blog</a>
+            <a href="#contact" class="btn">Contact</a>
+            <a href="/admin" class="btn">Login</a>
+        </nav>
+
+
+
+
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+
+
+
+    </header>
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>IT Help Desk Technician</h1>
+                <p class="subtitle">
+                    Tier 1 IT Support · Active Directory · Windows · Linux · Ticketing Systems
+                </p>
+                <p class="tagline">
+                    Calm under pressure. Clear communicator. Hands-on lab experience. Ready to support your users.
+                </p>
+                <a href="#labs" class="btn hero-btn">View My Labs</a>
+            </div>
+
+            <div class="hero-photo">
+                <img src="images/papa.jpg" alt="Juan David Alzate">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I’m a Tier 1 IT Support candidate with hands-on lab experience in Active Directory, Windows Server,
+            Linux, and ticketing systems. With 10+ years of client-facing experience, I bring calm communication,
+            structured troubleshooting, and strong follow-through to every issue.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Systems</h3>
+                <ul>
+                    <li>Windows 10/11</li>
+                    <li>Windows Server</li>
+                    <li>Ubuntu Linux</li>
+                    <li>VirtualBox VM setup</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Active Directory</h3>
+                <ul>
+                    <li>User & OU management</li>
+                    <li>GPOs</li>
+                    <li>NTFS permissions</li>
+                    <li>Password resets & lockouts</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Networking</h3>
+                <ul>
+                    <li>TCP/IP, DNS, DHCP</li>
+                    <li>LAN/WAN, VPN</li>
+                    <li>RDP troubleshooting</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Ticketing & ITSM</h3>
+                <ul>
+                    <li>Peppermint (Docker)</li>
+                    <li>Ticket intake & triage</li>
+                    <li>Prioritization & escalation</li>
+                    <li>SLA documentation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- LABS -->
+    <section id="labs" class="section">
+        <h2>Home Labs & Projects</h2>
+
+        <div class="labs-grid">
+
+            <div class="lab-card">
+                <h3>Active Directory Home Lab</h3>
+                <p>
+                    Deployed Windows Server domain controller, created OUs, users, GPOs, and practiced enterprise-level
+                    password resets, permissions, and lockout troubleshooting.
+                </p>
+                <button class="btn-outline" onclick="openPost('ad-lab')">Read Blog Post</button>
+            </div>
+
+            <div class="lab-card">
+                <h3>Peppermint Ticketing System</h3>
+                <p>
+                    Installed Peppermint via Docker on Linux and practiced full Tier 1 ticket lifecycle: intake,
+                    prioritization, escalation, and SLA documentation.
+                </p>
+                <button class="btn-outline" onclick="openPost('peppermint')">Read Blog Post</button>
+            </div>
+
+            <!-- <div class="lab-card">
+                <h3>Google Cybersecurity Labs</h3>
+                <p>
+                    Completed hands-on labs in Linux CLI, SIEM basics, log analysis, and incident response fundamentals.
+                </p>
+                <button class="btn-outline" onclick="openPost('google-cyber')">Read Blog Post</button>
+            </div> -->
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Driver & Client Liaison — Aliments Ares Foods</h3>
+                <p class="meta">Montreal, QC</p>
+                <p>
+                    Primary point of contact between clients, sales, and accounting. Triaged requests, managed
+                    escalations, and resolved concerns across a large client base — mirroring Tier 1 helpdesk workflows.
+                </p>
+                <p>
+                    De-escalated frustrated users daily, maintained composure under pressure, and followed through to
+                    resolution without supervision.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>IT Home Lab — Self-Directed</h3>
+                <p class="meta">Ongoing</p>
+                <p>
+                    Built and maintained labs for Active Directory, Windows Server, Linux, and ticketing systems to
+                    practice real-world troubleshooting, documentation, and escalation paths.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="section">
+        <h2>Certifications</h2>
+
+        <div class="cert-grid">
+            <div class="cert-card">
+                <h3>TCM Security Practical Help Desk</h3>
+                <p>Hands-on training in troubleshooting, OS fundamentals, networking, virtualization, and remote
+                    support.</p>
+            </div>
+
+            <div class="cert-card">
+                <h3>Google Cybersecurity Certificate</h3>
+                <p>Network security, Linux CLI, SIEM basics, incident response, and NIST Cybersecurity Framework.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG PREVIEW -->
+    <section id="blog" class="section alt">
+        <h2>Blog</h2>
+        <p class="blog-intro">Write-ups about my labs, accomplishments, and IT journey.</p>
+
+        <div id="blog-container" class="blog-grid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Open to IT Help Desk / Tier 1 Support roles across Canada.</p>
+
+        <ul class="contact-list">
+            <li><strong>Email:</strong> juandalzate@example.com</li>
+        </ul>
+    </section>
+
+    <script src="scripts.js"></script>
